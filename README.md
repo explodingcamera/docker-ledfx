@@ -1,4 +1,4 @@
-# LedFX Docker &nbsp; [![](https://ghcr-badge.deta.dev/explodingcamera/ledfx/size?tag=stable)](https://github.com/explodingcamera/docker-ledfx/pkgs/container/ledfx/59455876?tag=stable)
+# LedFX Docker
 
 > Simple Docker container for [LedFX](https://https://www.ledfx.app/). <br/>
 >

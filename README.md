@@ -1,13 +1,13 @@
 # LedFX Docker
 
-> Simple Docker container for [LedFX](https://https://www.ledfx.app/). <br/>
+> Simple Docker container for [LedFX](https://www.ledfx.app/). <br/>
 >
-> `ghcr.io/explodingcamera/ledfx:latest`
+> [`ghcr.io/explodingcamera/ledfx:latest`](https://github.com/explodingcamera/docker-ledfx/pkgs/container/ledfx)
 
 ## Tags
 
-- `latest` - Latest stable release
-- `v2.x.x` - Specific release version (updated weekly)
+- [`latest`](https://github.com/explodingcamera/docker-ledfx/pkgs/container/ledfx) - Latest stable release
+- [`v2.x.x`](https://github.com/explodingcamera/docker-ledfx/pkgs/container/ledfx) - Specific release version (updated weekly)
 
 ## Usage
 

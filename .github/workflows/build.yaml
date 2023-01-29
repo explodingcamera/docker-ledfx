@@ -19,7 +19,7 @@ jobs:
       - name: Get latest ledfx version
         id: version
         run: |
-          echo "LEDFX_VERSION=$(curl -Ls https://pypi.org/pypi/ledfx/json | jq -r .info.version) >> $GITHUB_ENV
+          echo "LEDFX_VERSION=$(curl -Ls https://pypi.org/pypi/ledfx/json | jq -r .info.version)" >> $GITHUB_ENV
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2

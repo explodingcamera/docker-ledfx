@@ -43,9 +43,7 @@ jobs:
           push: true
           context: .
           file: ./Dockerfile
-          tags:
-            [
-              "ghcr.io/explodingcamera/ledfx:latest",
-              "ghcr.io/explodingcamera/ledfx:${{ steps.version.outputs.LEDFX_VERSION }}",
-            ]
+          tags: |
+            ghcr.io/explodingcamera/ledfx:latest
+            ghcr.io/explodingcamera/ledfx:${{ steps.version.outputs.LEDFX_VERSION }}
           labels: ${{ steps.meta.outputs.labels }}

@@ -17,9 +17,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Get latest ledfx version
-        id: version
+        id: get-ledfx-version
         run: |
-          echo "LEDFX_VERSION=$(curl -Ls https://pypi.org/pypi/ledfx/json | jq -r .info.version)" >> $GITHUB_ENV
+          echo "LEDFX_VERSION=$(curl -Ls https://pypi.org/pypi/ledfx/json | jq -r .info.version)" >> $GITHUB_OUTPUT
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -43,7 +43,9 @@ jobs:
           push: true
           context: .
           file: ./Dockerfile
+          build-args: |
+            LEDFX_VERSION=${{ steps.get-ledfx-version.outputs.LEDFX_VERSION }}
           tags: |
             ghcr.io/explodingcamera/ledfx:latest
-            ghcr.io/explodingcamera/ledfx:${{ steps.version.outputs.LEDFX_VERSION }}
+            ghcr.io/explodingcamera/ledfx:${{ steps.get-ledfx-version.outputs.LEDFX_VERSION }}
           labels: ${{ steps.meta.outputs.labels }}

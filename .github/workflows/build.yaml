@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - Dockerfile
+      - .github/workflows/build.yaml
     branches: main
 
 jobs:

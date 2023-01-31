@@ -2,7 +2,7 @@
 
 > Simple Docker container for [LedFX](https://www.ledfx.app/). <br/>
 >
-> [`ghcr.io/explodingcamera/ledfx:latest`](https://github.com/explodingcamera/docker-ledfx/pkgs/container/ledfx)
+> [`ghcr.io/explodingcamera/ledfx:latest`](https://github.com/explodingcamera/docker-ledfx/pkgs/container/ledfx) <br/> [`docker.io/explodingcamera/ledfx:latest`](https://hub.docker.com/r/explodingcamera/ledfx)
 
 ## Tags
 

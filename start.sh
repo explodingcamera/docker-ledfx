@@ -23,4 +23,4 @@ chown -R ledfx:ledfx /home/ledfx
 
 
 echo "-- Starting ledfx..."
-gosu ledfx ledfx
+exec gosu ledfx ledfx

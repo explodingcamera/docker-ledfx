@@ -4,6 +4,8 @@
 >
 > [`ghcr.io/explodingcamera/ledfx:latest`](https://github.com/explodingcamera/docker-ledfx/pkgs/container/ledfx) <br/> [`docker.io/explodingcamera/ledfx:latest`](https://hub.docker.com/r/explodingcamera/ledfx)
 
+Only tested using `/dev/snd/`, should work with pulseaudio as well.
+
 ## Tags
 
 - [`latest`](https://github.com/explodingcamera/docker-ledfx/pkgs/container/ledfx) - Latest stable release

@@ -6,6 +6,9 @@ PGID=${PGID:-1000}
 groupmod -o -g "$PGID" ledfx
 usermod -o -u "$PUID" ledfx
 
+# docker doesn't set the group id of the audio group correctly
+chown root:audio /dev/snd/*
+
 set -e
 
 echo "

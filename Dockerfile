@@ -24,11 +24,8 @@ FROM debian:11.6-slim as ledfx
 ARG EXTRA_APT_PKGS=""
 ENV PATH="/opt/venv/bin:$PATH"
 
-RUN useradd -u 1000 -U -d /home/ledfx -s /bin/false ledfx \
-  && mkdir -p /home/ledfx \
-  && chown -R ledfx:ledfx /home/ledfx \
-  && usermod -G audio ledfx \
-  && set -eux && apt-get update && apt-get install -y --no-install-recommends \
+RUN set -eux && apt-get update && apt-get install -y --no-install-recommends \
+  alsa-utils \
   gosu \
   libatlas3-base \
   libavformat58 \
@@ -41,7 +38,11 @@ RUN useradd -u 1000 -U -d /home/ledfx -s /bin/false ledfx \
 
 COPY --from=ledfx-build --chown=1000:1000 /opt/venv /opt/venv
 COPY start.sh /app/start.sh
-RUN chmod +x /app/start.sh
+RUN chmod +x /app/start.sh \
+  && useradd -u 1000 -U -d /home/ledfx -s /bin/false ledfx \
+  && mkdir -p /home/ledfx \
+  && chown -R ledfx:ledfx /home/ledfx \
+  && usermod -G audio ledfx
 
 # Expose the port
 EXPOSE 8888

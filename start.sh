@@ -21,6 +21,7 @@ User gid:    $(id -g ledfx)
 
 chown -R ledfx:ledfx /home/ledfx
 
-
 echo "-- Starting ledfx..."
-exec gosu ledfx ledfx
+
+export PYTHONUNBUFFERED=1
+exec gosu ledfx ledfx $@

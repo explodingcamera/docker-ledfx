@@ -17,9 +17,14 @@
 docker run -d \
     --name ledfx \
     --restart=always \
+
+    # instead of binding the port, you can use --net=host
+    # which will also allow ledfx to discover your devices
     -p 8888:8888 \
+
     -e PUID=1000 \
     -e PGID=1000 \
+
     # e.g give access to a usb sound card
     --device=/dev/snd \
     -v /path/to/config:/home/ledfx/.ledfx/config.json \

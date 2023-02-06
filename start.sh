@@ -16,7 +16,7 @@ echo "
 LedFx Docker by explodingcamera
 -------------------------------------
 -------------------------------------
-User:        $(whoami)    
+User:        ledfx
 User uid:    $(id -u ledfx)
 User gid:    $(id -g ledfx)
 -------------------------------------
